@@ -1,0 +1,2 @@
+# thinkcmf_codegen
+一个适用于thinkcmf项目的数据列表管理程序生成代码工具 
