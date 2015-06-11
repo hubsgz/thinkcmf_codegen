@@ -7,7 +7,7 @@ return array(
 	//表名
 	'table_name' => 'user_favorites',  
 	//项目根目录完整路径
-	'project_rootpath'=> '/www/fcm/src', 
+	'project_rootpath'=> '/home/zsg/data/fcm/src', 
 	//数据库配置  
 	'db_conn' => array('192.168.1.11', 'root', '372123', 'kzq'),  
 );
