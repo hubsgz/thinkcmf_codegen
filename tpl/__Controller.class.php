@@ -6,7 +6,7 @@ namespace {$module_name}\Controller;
 
 use Common\Controller\AdminbaseController;
 
-class Admin{$classname}Controller extends AdminbaseController
+class Admin{$controllername}Controller extends AdminbaseController
 {
     public $model = null;
     

@@ -5,6 +5,9 @@
  */
 $config = require dirname(__FILE__) . '/config.php';
 $config['classname'] = tfname($config['table_name']);
+if ($config['controllername'] == '') {
+    $config['controllername'] = $config['classname'];
+}
 $config['columns'] = getcolumns($config);
 prikey($config);
 
@@ -34,7 +37,7 @@ function main($cfg)
     $c_controller = sprintf(
         '%s/Controller/Admin%sController.class.php', 
         $project_module_app_dir,
-        $cfg['classname']
+        $cfg['controllername']
         );
     if (file_exists($c_controller)) {
         error($c_controller.'已存在');
@@ -51,7 +54,7 @@ function main($cfg)
     $c_tpl_dir = sprintf(
         '%s/Admin%s', 
         $project_module_tpl_dir,
-        $cfg['classname']
+        $cfg['controllername']
         );
     if (is_dir($c_tpl_dir)) {
         error($c_tpl_dir.'已存在');
@@ -78,7 +81,7 @@ function main($cfg)
     debug('success create ' . $c_controller);
 
     //输出该问地址
-    debug(sprintf('Manage Url: /index.php?g=%s&m=Admin%s&a=index', $cfg['module_name'], $cfg['classname']));
+    debug(sprintf('Manage Url: /index.php?g=%s&m=Admin%s&a=index', $cfg['module_name'], $cfg['controllername']));
 }
 
 /**
