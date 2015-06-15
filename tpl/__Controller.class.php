@@ -73,7 +73,7 @@ class Admin{$controllername}Controller extends AdminbaseController
     }
     
     /**
-     * 删除系统消息
+     * 删除{$business_name}
      */
     function delete()
     {
